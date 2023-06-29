@@ -33,7 +33,7 @@ sns.pairplot(classify,hue="Species")
 plt.show()
 # This method will display the above method's graphs.
 
-print("By the above data graphs, we can say that Iris-setosa are seperated from the other two types")
+print("\nBy the above data graphs, we can say that Iris-setosa are seperated from the other two types\n")
 
 # Splitting the data to test and train the model
 
@@ -56,6 +56,12 @@ tree.fit(x_train, y_train)
 y_pred = tree.predict(x_test)
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
-print("Decision Tree Accuracy:", accuracy)
+print("\nDecision Tree Accuracy:", accuracy)
 
 # I used the Decision tree algorithm the for my model , as it is very easy and simple and give much more accurate result
+
+# Model classification report
+
+from sklearn.metrics import classification_report
+print(classification_report(y_test,y_pred))
+# this method will return the classification report of our model
