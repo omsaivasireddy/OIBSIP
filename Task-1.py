@@ -57,7 +57,7 @@ y_pred = tree.predict(x_test)
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
 print("\nDecision Tree Accuracy:", accuracy)
-
+print()
 # I used the Decision tree algorithm the for my model , as it is very easy and simple and give much more accurate result
 
 # Model classification report
@@ -65,3 +65,12 @@ print("\nDecision Tree Accuracy:", accuracy)
 from sklearn.metrics import classification_report
 print(classification_report(y_test,y_pred))
 # this method will return the classification report of our model
+
+# Testing the model
+
+x_new = nu.array([[4.9,2.2,3.8,1.1],[3,2,1,0.2],[5.3,2.5,4.6,1.9]])
+# Prediction of the species from the input matrix
+prediction=tree.predict(x_new)
+print("\nPrediction of Species: {}".format(prediction))
+
+print("\nThe output matrix is correct, means the model giving us the accurate output")
