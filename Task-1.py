@@ -47,3 +47,15 @@ Y=setvalues[:,4]
 from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.3)
 # this way we can split the data set into train and test 
+
+# Model evaluation
+
+from sklearn.tree import DecisionTreeClassifier
+tree = DecisionTreeClassifier(random_state=42)
+tree.fit(x_train, y_train)
+y_pred = tree.predict(x_test)
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+print("Decision Tree Accuracy:", accuracy)
+
+# I used the Decision tree algorithm the for my model , as it is very easy and simple and give much more accurate result
