@@ -34,3 +34,16 @@ plt.show()
 # This method will display the above method's graphs.
 
 print("By the above data graphs, we can say that Iris-setosa are seperated from the other two types")
+
+# Splitting the data to test and train the model
+
+setvalues = classify.values
+X=setvalues[:,0:4]
+Y=setvalues[:,4]
+# This way we can split the columns into input and output into X and Y
+
+# Model training
+
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.3)
+# this way we can split the data set into train and test 
